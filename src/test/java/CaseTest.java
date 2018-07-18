@@ -6,17 +6,16 @@ import page_object.MainPage;
 import utility.DriverSet;
 
 
-public class TestCase {
+public class CaseTest {
 
     WebDriver driver;
     MainPage mainPage;
 
     @Test
-    public void openBrowser() throws InterruptedException {
+    public void openBrowser() {
         driver = DriverSet.getDriver();
         driver.get("http://energy-ss.com");
         mainPage = new MainPage(driver);
-        Thread.sleep(10000);
         Assert.assertTrue(mainPage.isLogVisible());
     }
 
