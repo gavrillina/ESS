@@ -13,7 +13,7 @@ public class MainMenu extends MainPage {
     @FindBy(xpath = "//*[@class='first expanded']")
     private WebElement aboutCompany;
 
-    @FindBy(xpath = "html/body/div[1]/ul/li[2]/a")
+    @FindBy(xpath = "html/body/div[1]/ul/li[1]/a")
     private WebElement Services;
 
     @FindBy(xpath = "//*[@class='collapsed']")

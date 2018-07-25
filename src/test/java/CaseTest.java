@@ -22,7 +22,7 @@ public class CaseTest {
 
    private static final String CREDO = "PROVIDING ENERGY,\n" +
            "SAFE SOLUTIONS";
-   private static final String LABEL = "УСЛУГИ";
+   private static final String LABEL = "SERVICES";
    private WebDriver driver;
    private MainPage mainPage;
    private MainMenu mainMenu;
@@ -49,7 +49,6 @@ public class CaseTest {
         highlightElement(mainPage.getEnglSwitcher());
         mainPage.clickEngSwitcher();
         Assert.assertEquals(mainPage.getCredo().getText(),CREDO);
-        mainPage.getRussionSwitcher().click();
     }
 
     @Test(dependsOnMethods = "switchLanuage")
