@@ -1,11 +1,14 @@
 package page_object;
 
+import com.wktransportservices.utils.testautomation.ui.selenium.webdriver.framework.element.impl.internal.PageBlock;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utility.DriverSet;
+
+import java.util.List;
 
 public class MainPage {
 
@@ -26,11 +29,18 @@ public class MainPage {
     @FindBy(xpath ="//*[@class='language-link']")
     private WebElement englSwitcher;
 
+    @FindBy(xpath = "html/body/header/div[3]/div/div[3]/div/ul/li[2]/a")
+    private WebElement russionSwitcher;
+
+    public WebElement getRussionSwitcher() {
+        return russionSwitcher;
+    }
+
     @FindBy(xpath = "//*[@id='block-block-9']")
     private WebElement credo;
 
 
-    private WebElement getLogo() {
+    public WebElement getLogo() {
         return logo;
     }
 
