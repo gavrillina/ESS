@@ -13,6 +13,7 @@ import utility.DriverSet;
 import utility.RollingLogger;
 
 import java.lang.reflect.Method;
+import java.util.concurrent.TimeUnit;
 
 import static page_object.MainPage.highlightElement;
 
@@ -53,6 +54,7 @@ public class CaseTest {
 
     @Test(dependsOnMethods = "switchLanuage")
     public void openServicesPage(){
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         mainMenu = new MainMenu(driver);
         mainMenu.getServices().click();
         services = new Services(driver);
